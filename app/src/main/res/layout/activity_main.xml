@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.zqf.vitmiotestdemo.MainActivity">
 
-    <io.vov.vitamio.widget.CenterLayout
+
+    <FrameLayout
+        android:id="@+id/vitamio_centerlayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/media_height"
         android:orientation="vertical">
 
         <io.vov.vitamio.widget.VideoView
@@ -18,37 +21,42 @@
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"/>
-    </io.vov.vitamio.widget.CenterLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="horizontal">
-
-        <ProgressBar
-            android:id="@+id/probar"
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="30dp"
-            android:layout_height="30dp"/>
-
-        <TextView
-            android:id="@+id/load_rate"
+        <LinearLayout
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
-            android:text=""
-            android:textColor="#FFFFFF"/>
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/download_rate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
-            android:text=""
-            android:textColor="#FFFFFF"/>
+            <ProgressBar
+                android:id="@+id/probar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
 
-    </LinearLayout>
-</RelativeLayout>
+            <TextView
+                android:id="@+id/load_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/download_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/course_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

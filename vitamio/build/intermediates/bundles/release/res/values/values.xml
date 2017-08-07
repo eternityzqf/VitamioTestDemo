@@ -5,6 +5,7 @@
     <color name="mediacontroller_bg_pressed">#ff53c1bd</color>
     <color name="title">#5056CC</color>
     <color name="transparent">#00000000</color>
+    <dimen name="media_height">240dp</dimen>
     <string name="VideoView_error_button">OK</string>
     <string name="VideoView_error_text_invalid_progressive_playback">Sorry, this video is not valid for streaming to
         this device.

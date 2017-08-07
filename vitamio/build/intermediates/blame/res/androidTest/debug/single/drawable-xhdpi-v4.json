@@ -1,35 +1,107 @@
 [
     {
-        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mediacontroller_play.png",
-        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mediacontroller_play.png"
-    },
-    {
-        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scrubber_control_pressed_holo.png",
-        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\scrubber_control_pressed_holo.png"
-    },
-    {
-        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scrubber_control_disabled_holo.png",
-        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\scrubber_control_disabled_holo.png"
-    },
-    {
         "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scrubber_control_focused_holo.png",
         "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\scrubber_control_focused_holo.png"
     },
     {
-        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scrubber_track_holo_dark.9.png",
-        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\scrubber_track_holo_dark.9.png"
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\videobg.9.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\videobg.9.png"
     },
     {
-        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scrubber_control_normal_holo.png",
-        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\scrubber_control_normal_holo.png"
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_player_volume_up.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_player_volume_up.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\action_reload.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\action_reload.png"
     },
     {
         "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mediacontroller_pause.png",
         "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mediacontroller_pause.png"
     },
     {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_action_scale.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_action_scale.png"
+    },
+    {
         "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
         "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_player_close_white.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_player_close_white.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\video_player_bg_color.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\video_player_bg_color.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_player_volume_down.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_player_volume_down.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scrubber_control_pressed_holo.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\scrubber_control_pressed_holo.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\mediacontroller_play.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mediacontroller_play.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_player_pause.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_player_pause.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scrubber_control_disabled_holo.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\scrubber_control_disabled_holo.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_action_download_without_padding.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_action_download_without_padding.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_player_progress_handle.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_player_progress_handle.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_player_next.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_player_next.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_player_play.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_player_play.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scrubber_track_holo_dark.9.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\scrubber_track_holo_dark.9.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\action_pause.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\action_pause.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scrubber_control_normal_holo.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\scrubber_control_normal_holo.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_action_share_without_padding.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_action_share_without_padding.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_action_favorites.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_action_favorites.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\seekbar_dian.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\seekbar_dian.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_action_favorites_added.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_action_favorites_added.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_player_reload.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_player_reload.png"
     },
     {
         "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scrubber_secondary_holo.9.png",

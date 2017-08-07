@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4\\ic_player_play.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\mipmap-xxhdpi-v4\\ic_player_play.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4\\ic_launcher.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\mipmap-xxhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4\\ic_action_scale.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\mipmap-xxhdpi-v4\\ic_action_scale.png"
+    },
+    {
+        "merged": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4\\ic_player_pause.png",
+        "source": "D:\\AndroidProject\\VitmioTestDemo\\vitamio\\build\\intermediates\\bundles\\debug\\res\\mipmap-xxhdpi-v4\\ic_player_pause.png"
+    }
+]

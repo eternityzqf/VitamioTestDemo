@@ -10,10 +10,13 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import io.vov.vitamio.MediaPlayer;
+import io.vov.vitamio.widget.MediaController;
 import io.vov.vitamio.widget.VideoView;
 
 /**
@@ -27,31 +30,48 @@ public class MainActivity extends Activity implements MediaPlayer.OnInfoListener
     private Uri mUri;
     private ProgressBar pb;
     private TextView downloadRateView, loadRateView;
-    private CustomMediaController mCustomMediaController;
+    //    private CustomMediaController mCustomMediaController;
+    private MediaController mMediaController;
     private VideoView mVideoView;
     public static long mCurrent_position = 0;//当前播放的位置
     public static final int VIDEO_LAYOUT_ORIGIN = 0;//缩放参数，原始画面大小0。
     public static final int VIDEO_LAYOUT_SCALE = 1;//缩放参数，画面全屏1。
+    private FrameLayout mFlVideoGroup;
+    //当前是否为全屏
+    private Boolean mIsFullScreen = false;
+    //是否home键切换后台
+    private Boolean isSwitchBackStage = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //定义全屏参数
+//        //定义全屏参数
         int flag = WindowManager.LayoutParams.FLAG_FULLSCREEN;
-        //获得当前窗体对象
+//        //获得当前窗体对象
         Window window = MainActivity.this.getWindow();
-        //设置当前窗体为全屏显示
+//        //设置当前窗体为全屏显示
         window.setFlags(flag, flag);
         setContentView(R.layout.activity_main);
         initView();
         initData();
     }
 
+    private void initView() {
+        mVideoView = (VideoView) findViewById(R.id.vitamio_video);
+        mFlVideoGroup = (FrameLayout) findViewById(R.id.vitamio_centerlayout);
+//        mCustomMediaController = new CustomMediaController(this, mVideoView, mVitamio_centerlayout);
+        mMediaController = new MediaController(this, mVideoView, true, mFlVideoGroup);
+//        mMediaController.setVideoName("此处可以设置视频名称");
+        pb = (ProgressBar) findViewById(R.id.probar);
+        downloadRateView = (TextView) findViewById(R.id.download_rate);
+        loadRateView = (TextView) findViewById(R.id.load_rate);
+    }
+
     private void initData() {
         mUri = Uri.parse(video_path);//将地址转化为Uri
         mVideoView.setVideoURI(mUri);//设置播放视频的地址
-        mCustomMediaController.show(5000);//设置显示时间差
-        mVideoView.setMediaController(mCustomMediaController);//设置媒体控制器。
+        mMediaController.show(5000);//设置显示时间差
+        mVideoView.setMediaController(mMediaController);//设置媒体控制器。
         mVideoView.setVideoQuality(MediaPlayer.VIDEOQUALITY_HIGH);//设置画质
         mVideoView.requestFocus();//获取焦点
         mVideoView.setBufferSize(512 * 1024);//设置缓冲大小（单位Byte）
@@ -71,22 +91,16 @@ public class MainActivity extends Activity implements MediaPlayer.OnInfoListener
             @Override
             public void onPrepared(MediaPlayer mp) {
                 /**
-                 * 在视频预处理完成后调用。在视频预处理完成后被调用。
+                 * 在视频预处理完成后调用。
                  * 此时视频的宽度、高度、宽高比信息已经获取到，
                  * 此时可调用seekTo让视频从指定位置开始播放。
                  */
+                Log.e("Tag", "setOnPreparedListener");
                 mp.setPlaybackSpeed(1.0f);
+                mVideoView.setVideoLayout(VideoView.VIDEO_LAYOUT_SCALE, 0);
+                mVideoView.start();
             }
         });
-    }
-
-    private void initView() {
-        mVideoView = (VideoView) findViewById(R.id.vitamio_video);
-        mCustomMediaController = new CustomMediaController(this, mVideoView, this);
-        mCustomMediaController.setVideoName("此处可以设置视频名称");
-        pb = (ProgressBar) findViewById(R.id.probar);
-        downloadRateView = (TextView) findViewById(R.id.download_rate);
-        loadRateView = (TextView) findViewById(R.id.load_rate);
     }
 
 
@@ -171,7 +185,9 @@ public class MainActivity extends Activity implements MediaPlayer.OnInfoListener
         super.onDestroy();
         Log.e("Tag", "onDestroy");
         //停止视频播放，并释放资源。
+        mVideoView.destroyDrawingCache();
         mVideoView.stopPlayback();
+        mVideoView = null;
         mCurrent_position = 0;
     }
 
@@ -212,17 +228,23 @@ public class MainActivity extends Activity implements MediaPlayer.OnInfoListener
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         Log.e("Tag", newConfig.orientation + "");
-        if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            //竖屏-->显示原始画面
-            if (mVideoView != null) {
-                mVideoView.setVideoLayout(VIDEO_LAYOUT_ORIGIN, 0);
-            }
-        } else if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            //横屏-->显示全屏画面
-            if (mVideoView != null) {
-                mVideoView.setVideoLayout(VIDEO_LAYOUT_SCALE, 0);
-            }
-        }
         super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            //横屏
+            mIsFullScreen = true;
+            //调整mFlVideoGroup布局参数
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout
+                    .LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.MATCH_PARENT);
+            mFlVideoGroup.setLayoutParams(params);
+            mVideoView.setVideoLayout(VideoView.VIDEO_LAYOUT_SCALE, 0);
+        } else {
+            mIsFullScreen = false;
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout
+                    .LayoutParams.MATCH_PARENT,
+                    PixelUtils.dip2px(this, 230));
+            mFlVideoGroup.setLayoutParams(params);
+            mVideoView.setVideoLayout(VideoView.VIDEO_LAYOUT_ORIGIN, 0);
+        }
     }
 }

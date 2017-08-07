@@ -37,6 +37,7 @@ public class CustomMediaController extends MediaController {
     private Context context;
     private String videoname;//视频名称
     private int controllerWidth = 0;//设置mediaController高度为了使横屏时top显示在屏幕顶端
+    private int controllerHeight = 0;
     private View mVolumeBrightnessLayout;//提示窗口
     private ImageView mOperationBg;//提示图片
     private TextView mOperationTv;//提示文字
@@ -50,6 +51,9 @@ public class CustomMediaController extends MediaController {
     private int mVolume = -1;
     //当前亮度
     private float mBrightness = -1f;
+
+    private Activity mActivity;
+
     //返回监听
     private View.OnClickListener backListener = new View.OnClickListener() {
         public void onClick(View v) {
@@ -58,7 +62,6 @@ public class CustomMediaController extends MediaController {
             }
         }
     };
-
 
     private View.OnClickListener scaleListener = new View.OnClickListener() {
         @Override
@@ -89,7 +92,7 @@ public class CustomMediaController extends MediaController {
         }
     };
     private ImageView mIvScale;
-
+    private View mV;
 
     //videoview 用于对视频进行控制的等，activity为了退出
     public CustomMediaController(Context context, VideoView videoView, Activity activity) {
@@ -99,27 +102,39 @@ public class CustomMediaController extends MediaController {
         this.activity = activity;
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         controllerWidth = wm.getDefaultDisplay().getWidth();
+        controllerHeight = wm.getDefaultDisplay().getHeight();
         mGestureDetector = new GestureDetector(context, new MyGestureListener());
     }
+
+    public CustomMediaController(Activity activity,VideoView videoView, View container) {
+        super(activity);
+        this.activity = activity;
+        this.videoView = videoView;
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        controllerWidth = wm.getDefaultDisplay().getWidth();
+        controllerHeight = wm.getDefaultDisplay().getHeight();
+        mGestureDetector = new GestureDetector(context, new MyGestureListener());
+    }
+
 
     @Override
     protected View makeControllerView() {
         //此处的   mymediacontroller  为我们自定义控制器的布局文件名称
-        View v = ((LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(getResources().getIdentifier("mymediacontroller", "layout", getContext().getPackageName()), this);
-        v.setMinimumHeight(controllerWidth);
+        mV = ((LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(getResources().getIdentifier("mymediacontroller", "layout", getContext().getPackageName()), this);
+//        mV.setMinimumHeight(controllerWidth);
         //获取控件
-        img_back = (ImageButton) v.findViewById(getResources().getIdentifier("mediacontroller_top_back", "id", context.getPackageName()));
-        mFileName = (TextView) v.findViewById(getResources().getIdentifier("mediacontroller_filename", "id", context.getPackageName()));
+        img_back = (ImageButton) mV.findViewById(getResources().getIdentifier("mediacontroller_top_back", "id", context.getPackageName()));
+        mFileName = (TextView) mV.findViewById(getResources().getIdentifier("mediacontroller_filename", "id", context.getPackageName()));
         //缩放控件
-        mIvScale = (ImageView) v.findViewById(getResources().getIdentifier("mediacontroller_scale", "id", context.getPackageName()));
+        mIvScale = (ImageView) mV.findViewById(getResources().getIdentifier("mediacontroller_scale", "id", context.getPackageName()));
 
         if (mFileName != null) {
             mFileName.setText(videoname);
         }
         //声音控制
-        mVolumeBrightnessLayout = (RelativeLayout) v.findViewById(R.id.operation_volume_brightness);
-        mOperationBg = (ImageView) v.findViewById(R.id.operation_bg);
-        mOperationTv = (TextView) v.findViewById(R.id.operation_tv);
+        mVolumeBrightnessLayout = (RelativeLayout) mV.findViewById(R.id.operation_volume_brightness);
+        mOperationBg = (ImageView) mV.findViewById(R.id.operation_bg);
+        mOperationTv = (TextView) mV.findViewById(R.id.operation_tv);
         mOperationTv.setVisibility(View.GONE);
         mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
         mMaxVolume = mAudioManager
@@ -128,7 +143,7 @@ public class CustomMediaController extends MediaController {
         //注册事件监听
         img_back.setOnClickListener(backListener);
         mIvScale.setOnClickListener(scaleListener);
-        return v;
+        return mV;
     }
 
     @Override
